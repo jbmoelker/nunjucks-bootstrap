@@ -24,16 +24,16 @@ Create a nav (base, inline, tabs or pills) with (active) items:
 {% endcall %}
 ```
 
-### `.base()`, `.inline()`, `.tabs()`, `.pills()`
+### `.base()`, `.inline()`, `.tabs()`, `.pills()`, `.stackedPills()`
 
-Creates a nav element.
+Creates a [base](http://v4-alpha.getbootstrap.com/components/navs/#base-nav), [inline](http://v4-alpha.getbootstrap.com/components/navs/#inline), [tabs](http://v4-alpha.getbootstrap.com/components/navs/#tabs), [pills](http://v4-alpha.getbootstrap.com/components/navs/#pills) or [stacked pills](http://v4-alpha.getbootstrap.com/components/navs/#stacked-pills) nav element.
 
 Use as [`call` block](http://mozilla.github.io/nunjucks/templating.html#call).
 Content inside block is displayed inside the nav.
 
 index | parameter | type | description
 --- | --- | --- | ---
-0 | text | string[] *optional* | List of classes to apply to the nav element.
+0 | classes | string[] *optional* | List of classes to apply to the nav element.
 
 ### `.item()`, `activeItem()`, `disabledItem()`
 

@@ -2,12 +2,12 @@
 {% import "./nav.html" as nav %}
 
 {% block content %}
-<demo aria-label="Base nav with 4 items (incl. active & disabled state)">
+<demo aria-label="Base nav with 4 links (incl. active & disabled state)">
     {% call nav.base() %}
-        {{ nav.activeItem('Active', '#item1') }}
-        {{ nav.item('Default item', '#item2') }}
-        {{ nav.item('Another item', '#item3') }}
-        {{ nav.disabledItem('Disabled', '#item4') }}
+        {{ nav.activeLink('Active', '#item1') }}
+        {{ nav.link('Default item', '#item2') }}
+        {{ nav.link('Another item', '#item3') }}
+        {{ nav.disabledLink('Disabled', '#item4') }}
     {% endcall %}
 </demo>
 
@@ -37,4 +37,13 @@
         {{ nav.disabledItem('Disabled', '#item4') }}
     {% endcall %}
 </demo>
+
+    <demo aria-label="Stacked pills nav with 4 items (incl. active & disabled state)">
+        {% call nav.stackedPills() %}
+        {{ nav.activeItem('Active', '#item1') }}
+        {{ nav.item('Default item', '#item2') }}
+        {{ nav.item('Another item', '#item3') }}
+        {{ nav.disabledItem('Disabled', '#item4') }}
+        {% endcall %}
+    </demo>
 {% endblock %}

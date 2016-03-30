@@ -14,6 +14,10 @@
     <ul class="nav nav-pills {{ classes | join(' ') }}">{{ caller() }}</ul>
 {%- endmacro -%}
 
+{%- macro stackedPills(classes = []) -%}
+    <ul class="nav nav-pills nav-stacked {{ classes | join(' ') }}">{{ caller() }}</ul>
+{%- endmacro -%}
+
 {%- macro link(text, url) -%}
     <a class="nav-link" {% if url %}href="{{ url }}"{% endif %}>{{ text }}</a>
 {%- endmacro -%}
