@@ -1,0 +1,39 @@
+{%- macro list(classes = []) -%}
+    <ul class="nav nav-tabs {{ classes | join(' ') }}" role="tablist">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro content(classes = []) -%}
+    <div class="tab-content {{ classes | join(' ') }}">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro link(text, paneId) -%}
+    <a class="nav-link" data-toggle="tab" href="#{{ paneId }}" role="tab">{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro activeLink(text, paneId) -%}
+    <a class="nav-link active" data-toggle="tab" href="#{{ paneId }}" role="tab">{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro disabledLink(text) -%}
+    <span class="nav-link disabled" role="tab">{{ text }}</span>
+{%- endmacro -%}
+
+{%- macro item(text, paneId) -%}
+    <li class="nav-item">{{ link(text, paneId) }}</li>
+{%- endmacro -%}
+
+{%- macro activeItem(text, paneId) -%}
+    <li class="nav-item">{{ activeLink(text, paneId) }}</li>
+{%- endmacro -%}
+
+{%- macro disabledItem(text) -%}
+    <li class="nav-item">{{ disabledLink(text, paneId) }}</li>
+{%- endmacro -%}
+
+{%- macro pane(id, classes = []) -%}
+    <div class="tab-pane {{ classes | join(' ') }}" id="{{ id }}" role="tabpanel">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro activePane(id, classes = []) -%}
+    <div class="tab-pane active {{ classes | join(' ') }}" id="{{ id }}" role="tabpanel">{{ caller() }}</div>
+{%- endmacro -%}
