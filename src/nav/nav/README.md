@@ -3,6 +3,7 @@
 ## Functionality
 
 > Navigation available in Bootstrap share general markup and styles, from the base `.nav` class to the active and disabled states. Swap modifier classes to switch between each style.
+>
 > -- [Bootstrap > Nav](http://v4-alpha.getbootstrap.com/components/navs/)
 
 ## Usage
