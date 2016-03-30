@@ -1,0 +1,24 @@
+{#- `counter` is used to set the `position` (http://schema.org/position) on each breadcrumb item -#}
+
+{%- macro list() -%}
+    {#- trim whitespace -#}{{ counter.reset() }}{#- -#}
+    <ol class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">
+        {#- -#}{{ caller() }}{#- -#}
+    </ol>
+{%- endmacro -%}
+
+{%- macro item(text, url) -%}
+    {#- -#}{{ counter.increment() }}{#- -#}
+    <li property="itemListElement" typeof="ListItem">
+        {#- -#}<a href="{{ url }}">{{ text }}</a>{#- -#}
+        <meta property="position" content="{{ counter.print() }}">{#- -#}
+    </li>
+{%- endmacro -%}
+
+{%- macro activeItem(text) -%}
+    {#- -#}{{ counter.increment() }}{#- -#}
+    <li class="active" property="itemListElement" typeof="ListItem">
+        {#- -#}{{ text }}{#- -#}
+        <meta property="position" content="{{ counter.print() }}">{#- -#}
+    </li>
+{%- endmacro -%}
