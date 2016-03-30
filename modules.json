@@ -8,5 +8,10 @@
         "group": "nav",
         "name": "nav",
         "url": "nav/nav/nav.demo.html"
+    },
+    {
+        "group": "nav",
+        "name": "tabs",
+        "url": "nav/tabs/tabs.demo.html"
     }
 ]
