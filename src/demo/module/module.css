@@ -1,3 +1,5 @@
+demo { display: block; }
+
 /* add a grey bar with the `aria-label` as demo title */
 demo:before {
     content: "Demo: " attr(aria-label);
@@ -6,4 +8,9 @@ demo:before {
     padding: .5em;
     clear: both;
     margin: .5em 0;
+}
+
+.demo-spacer {
+    display: block;
+    height: 1em;
 }

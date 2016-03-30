@@ -1,0 +1,59 @@
+{% extends "demo/module/module.html" %}
+{% import "./navbar.html" as navbar %}
+{% import "../nav/nav.html" as nav %}
+
+{% block content %}
+    <demo aria-label="Default navbar (light, faded)">
+        {% call navbar.bar() %}
+        navbar content
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Navbar with brand">
+        {% call navbar.bar() %}
+            {{ navbar.brand('My company') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Navbar with brand, nav list and search form">
+        {% call navbar.bar() %}
+            {{ navbar.brand('My company') }}
+            {% call navbar.nav() %}{{ demoNavItems() }}{% endcall %}
+            {{ demoSearchForm() }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Navbar in different color schemes (dark-inverse | dark-primary | light-custom backgroud)">
+        {% call navbar.bar(color = 'dark', background = 'inverse') %}{{ demoNavbarContent() }}{% endcall %}
+        <div class="demo-spacer"></div>
+        {% call navbar.bar(color = 'dark', background = 'primary') %}{{ demoNavbarContent() }}{% endcall %}
+        <div class="demo-spacer"></div>
+        {% call navbar.bar(color = 'light', classes = ['navbar-custom-bg']) %}{{ demoNavbarContent() }}{% endcall %}
+        <style>.navbar-custom-bg { background-color: #e3f2fd; }</style>
+    </demo>
+
+    <demo aria-label="Navbar fixed to bottom">
+        {% call navbar.bar(placement = 'fixed-bottom') %}{{ demoNavbarContent() }}{% endcall %}
+    </demo>
+{% endblock %}
+
+{% macro demoNavbarContent() %}
+    {{ navbar.brand('My company') }}
+    {% call navbar.nav() %}{{ demoNavItems() }}{% endcall %}
+    {{ demoSearchForm() }}
+{% endmacro %}
+
+{% macro demoNavItems() %}
+    {{ nav.activeItem('Active', '#item1') }}
+    {{ nav.item('Default item', '#item2') }}
+    {{ nav.item('Another item', '#item3') }}
+    {{ nav.disabledItem('Disabled', '#item4') }}
+{% endmacro %}
+
+{% macro demoSearchForm() %}
+    {#- borrowed from http://v4-alpha.getbootstrap.com/components/navbar/#supported-content -#}
+    <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+{% endmacro %}

@@ -1,0 +1,15 @@
+{%- macro bar(color = 'light', background = 'faded', placement, classes = []) -%}
+    <nav role="navigation" class="navbar
+        {{ 'navbar-' + color }}
+        {{ 'bg-' + background }}
+        {% if placement %}{{ 'navbar-' + placement }}{% endif %}
+        {{ classes | join(' ') }}">{{ caller() }}</nav>
+{%- endmacro -%}
+
+{%- macro nav(classes = []) -%}
+    <ul class="nav nav-inline navbar-nav {{ classes | join(' ') }}">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro brand(text, url = '/') -%}
+    <a class="navbar-brand" rel="home" href="{{ url }}">{{ text }}</a>
+{% endmacro %}
