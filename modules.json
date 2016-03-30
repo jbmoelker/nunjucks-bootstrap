@@ -2,16 +2,25 @@
     {
         "group": "nav",
         "name": "breadcrumb",
-        "url": "nav/breadcrumb/breadcrumb.demo.html"
+        "url": "nav/breadcrumb/breadcrumb.demo.html",
+        "info": {
+            "readme": "nav/breadcrumb/readme.html"
+        }
     },
     {
         "group": "nav",
         "name": "nav",
-        "url": "nav/nav/nav.demo.html"
+        "url": "nav/nav/nav.demo.html",
+        "info": {
+            "readme": "nav/nav/readme.html"
+        }
     },
     {
         "group": "nav",
         "name": "tabs",
-        "url": "nav/tabs/tabs.demo.html"
+        "url": "nav/tabs/tabs.demo.html",
+        "info": {
+            "readme": "nav/tabs/readme.html"
+        }
     }
 ]

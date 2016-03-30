@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>core/template/README.md</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+</head>
+<body>
+<main class="container-fluid"><h1 id="core-template">Core template</h1>
+<h2 id="functionality">Functionality</h2>
+<p>This <a href="http://v4-alpha.getbootstrap.com/getting-started/introduction/#starter-template">starter template</a>
+ensures Bootstrap files are included and you have your pages set up with the latest design and development standards.</p>
+<h2 id="usage">Usage</h2>
+<p>Extend the template:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >extends</span></span> <span class="token string" ><span class="token punctuation" >"</span>core/template/template.html<span class="token punctuation" >"</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Add content inside <code>content</code> block:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >block</span></span> <span class="token property" >content</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span> <span class="token other" >your content here</span> <span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >endblock</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Optionally add code to <code>head</code> or <code>foot</code> (before closing <code>&lt;/body&gt;</code>):</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >block</span></span> <span class="token property" >head</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span>
+    <span class="token tag" ><span class="token ld" ><span class="token punctuation" >{{</span></span> <span class="token property" >super</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token rd" ><span class="token punctuation" >}}</span></span></span>
+    <span class="token other" ><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>title</span><span class="token punctuation" >></span></span>Pag title<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>title</span><span class="token punctuation" >></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- etc --></span></span>
+<span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >endblock</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span>
+
+<span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >block</span></span> <span class="token property" >foot</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span>
+    <span class="token tag" ><span class="token ld" ><span class="token punctuation" >{{</span></span> <span class="token property" >super</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token rd" ><span class="token punctuation" >}}</span></span></span>
+    <span class="token other" >&lt;script src="path/to/script.js><span class="token script language-javascript" ></span><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>script</span><span class="token punctuation" >></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- etc --></span></span>
+<span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >endblock</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><h2 id="notes">Notes</h2>
+<ul>
+<li>Template uses CSS and JS from remote CDNs. Should be served from <code>node_modules/bootstrap/</code>.</li>
+</ul>
+</main>
+</body>
+</html>

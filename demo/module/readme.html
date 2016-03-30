@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>demo/module/README.md</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+</head>
+<body>
+<main class="container-fluid"><h1 id="demo-module">Demo module</h1>
+<h2 id="funcionality">Funcionality</h2>
+<p>Display a module in isolation, in all its variations.</p>
+<h2 id="usage">Usage</h2>
+<p>Extend the template:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >extends</span></span> <span class="token string" ><span class="token punctuation" >"</span>demo/module/module.html<span class="token punctuation" >"</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Add demos inside the <code>content</code> block using <code>&lt;demo aria-label=&quot;Demo title&quot;&gt;</code> markup:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >block</span></span> <span class="token property" >content</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span>
+<span class="token other" ><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>demo</span> <span class="token attr-name" >arial-label</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Primary button - extra visual weight and identifies the primary action.<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>button<span class="token punctuation" >"</span></span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>btn btn-primary<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>Primary<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>button</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>demo</span><span class="token punctuation" >></span></span>
+
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>demo</span> <span class="token attr-name" >arial-label</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Success button - indicates a successful or positive action<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>
+    <span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>button</span> <span class="token attr-name" >type</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>button<span class="token punctuation" >"</span></span> <span class="token attr-name" >class</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>btn btn-success<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span>Success<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>button</span><span class="token punctuation" >></span></span>
+<span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;/</span>demo</span><span class="token punctuation" >></span></span>
+
+<span class="token comment" spellcheck="true">&lt;!-- etc --></span></span>
+<span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >endblock</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre></main>
+</body>
+</html>
