@@ -1,0 +1,39 @@
+{
+  "name": "nunjucks-bootstrap",
+  "version": "1.0.0",
+  "description": "Nunjucks templates for Bootstrap modules",
+  "main": "index.js",
+  "scripts": {
+    "prebuild": "rimraf dist/",
+    "build": "node ./scripts/build.js",
+    "start": "npm run start:dev",
+    "start:dev": "nodemon ./index.js",
+    "start:dist": "http-server './dist/' -c-1 -o -p 65528",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbmoelker/nunjucks-bootstrap.git"
+  },
+  "keywords": [],
+  "author": "Jasper Moelker <jasper@voorhoede.nl> (https://voorhoede.nl/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbmoelker/nunjucks-bootstrap/issues"
+  },
+  "homepage": "https://github.com/jbmoelker/nunjucks-bootstrap#readme",
+  "devDependencies": {
+    "bluebird": "3.3.4",
+    "express": "4.13.4",
+    "glob": "7.0.3",
+    "http-server": "0.9.0",
+    "mkdirp": "0.5.1",
+    "ncp": "2.0.0",
+    "nodemon": "1.9.1",
+    "nunjucks": "2.4.1",
+    "rimraf": "2.5.2"
+  },
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.2"
+  }
+}
