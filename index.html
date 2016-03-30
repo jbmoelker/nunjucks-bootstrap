@@ -1,1 +1,29 @@
-<h1>nunjucks-bootstrap placeholder</h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Bootstrap component viewer</title>
+</head>
+<body>
+
+<demo-viewer></demo-viewer>
+
+<link rel="stylesheet" href="viewer.css">
+<script src="viewer.js"></script>
+
+<script>
+    window.demoViewer({
+        modules: 'modules.json',
+        sizes: [
+            { name: 'XS', width: 320 },
+            { name: 'S', width: 500 },
+            { name: 'M', width: 750 },
+            { name: 'L', width: 1020 },
+            { name: 'XL', width: 1200 }
+        ]
+    });
+</script>
+
+</body>
+</html>

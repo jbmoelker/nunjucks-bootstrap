@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+              integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+              crossorigin="anonymous">
+    
+    <style>/* add a grey bar with the `aria-label` as demo title */
+demo:before {
+    content: "Demo: " attr(aria-label);
+    display: block;
+    background: #F3F5F5;
+    padding: .5em;
+    clear: both;
+    margin: .5em 0;
+}</style>
+
+</head>
+<body>
+
+
+<demo aria-label="Base nav with 4 links (incl. active & disabled state)">
+    <nav class="nav ">
+        <a class="nav-link active" href="#item1">Active</a>
+        <a class="nav-link" href="#item2">Default item</a>
+        <a class="nav-link" href="#item3">Another item</a>
+        <span class="nav-link disabled">Disabled</span>
+    </nav>
+</demo>
+
+<demo aria-label="Inline nav with 4 items (incl. active & disabled state)">
+    <ul class="nav nav-inline ">
+        <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+        <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+    </ul>
+</demo>
+
+<demo aria-label="Tabs nav with 4 items (incl. active & disabled state)">
+    <ul class="nav nav-tabs ">
+        <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+        <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+    </ul>
+</demo>
+
+<demo aria-label="Pills nav with 4 items (incl. active & disabled state)">
+    <ul class="nav nav-pills ">
+        <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+        <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+    </ul>
+</demo>
+
+    <demo aria-label="Stacked pills nav with 4 items (incl. active & disabled state)">
+        <ul class="nav nav-pills nav-stacked ">
+        <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+        <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+        <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+        </ul>
+    </demo>
+
+
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+            integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
