@@ -1,0 +1,23 @@
+sudo: false
+language: node_js
+node_js:
+- '5.0'
+cache:
+  directories:
+  - node_modules
+branches:
+  only:
+  - master
+notifications:
+  email: false
+before_script:
+- npm prune
+script:
+- npm run build
+after_script:
+- bash ./scripts/deploy.sh
+env:
+  global:
+  - GH_USER: jbmoelker
+  - GH_REPO: nunjucks-bootstrap
+  - secure: IyXw1t0z4/3XG1QVQDfveIvvk+Gl9o9COJ1mYJ6cYkvu3tzkoLY6yeWN/1X51+xCE1vdq8tSEbyg7eB5Ye6+We7kC9PGfuLuDwwTm3e2waT1e0XQHyT3vk2hiJ73q5DgEphCSS1yCgT4tDCl3YjNMWSfR3km5bqFAhCP+0VGSe7DAhXdfFkcA6wfZO+D5UkYSwtMBtTPdt4FzsGrh4zCU57LiaaNtWOe24StsBISsDAtiQTHTBXK1osWVyfwsY2W8xPBYfVYrJLN7bJ6aKzF9iD7uqQ7dR9LuIKZ2W+BX5qSReufpJuiZ/3G2IIxvQUzJf8hXLqZ4g0Bc6W4GwKf/Qv5d+N0GdxftsiK0zHbXrHK1rYV61GVguBkzH8qJtUoMDGaa8Fr50WZ0PDpX97pg+V28emdfF+Ufh3ICgxZ1N3Red3YBh5TPtR2TyFYK/EUSJz6uOL9Jc60/7zC8b6gaqysXrL3Ywc79qc2U4OtzSZIshjB8KScweMYAXVdwiWlpqC+j+32XdZ6xWR+o4JoselzTT+xrDVDYII+tOQVpROoM04uVDSUexSuKkMo+sM2F0mcNhkymGZ4nOHp/s6T01f3DJB8MPYCIN+Z+e0HG2XAqjUXgQEh3x6teG0zMdaWQlTNkoJ8rkXjrngtGil9fyDuny3YuNYEvMjK4Yniaro=
