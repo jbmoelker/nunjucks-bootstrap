@@ -1,0 +1,39 @@
+{%- macro base(classes = []) -%}
+    <nav class="nav {{ classes | join(' ') }}">{{ caller() }}</nav>
+{%- endmacro -%}
+
+{%- macro inline(classes = []) -%}
+    <ul class="nav nav-inline {{ classes | join(' ') }}">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro tabs(classes = []) -%}
+    <ul class="nav nav-tabs {{ classes | join(' ') }}">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro pills(classes = []) -%}
+    <ul class="nav nav-pills {{ classes | join(' ') }}">{{ caller() }}</ul>
+{%- endmacro -%}
+
+{%- macro link(text, url) -%}
+    <a class="nav-link" {% if url %}href="{{ url }}"{% endif %}>{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro activeLink(text, url) -%}
+    <a class="nav-link active" {% if url %}href="{{ url }}"{% endif %}>{{ text }}</a>
+{%- endmacro -%}
+
+{%- macro disabledLink(text) -%}
+    <span class="nav-link disabled">{{ text }}</span>
+{%- endmacro -%}
+
+{%- macro item(text, url) -%}
+    <li class="nav-item">{{ link(text, url) }}</li>
+{%- endmacro -%}
+
+{%- macro activeItem(text, url) -%}
+    <li class="nav-item">{{ activeLink(text, url) }}</li>
+{%- endmacro -%}
+
+{%- macro disabledItem(text, url) -%}
+    <li class="nav-item">{{ disabledLink(text, url) }}</li>
+{%- endmacro -%}

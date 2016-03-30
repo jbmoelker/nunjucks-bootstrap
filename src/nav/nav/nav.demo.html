@@ -1,0 +1,40 @@
+{% extends "demo/module/module.html" %}
+{% import "./nav.html" as nav %}
+
+{% block content %}
+<demo aria-label="Base nav with 4 items (incl. active & disabled state)">
+    {% call nav.base() %}
+        {{ nav.activeItem('Active', '#item1') }}
+        {{ nav.item('Default item', '#item2') }}
+        {{ nav.item('Another item', '#item3') }}
+        {{ nav.disabledItem('Disabled', '#item4') }}
+    {% endcall %}
+</demo>
+
+<demo aria-label="Inline nav with 4 items (incl. active & disabled state)">
+    {% call nav.inline() %}
+        {{ nav.activeItem('Active', '#item1') }}
+        {{ nav.item('Default item', '#item2') }}
+        {{ nav.item('Another item', '#item3') }}
+        {{ nav.disabledItem('Disabled', '#item4') }}
+    {% endcall %}
+</demo>
+
+<demo aria-label="Tabs nav with 4 items (incl. active & disabled state)">
+    {% call nav.tabs() %}
+        {{ nav.activeItem('Active', '#item1') }}
+        {{ nav.item('Default item', '#item2') }}
+        {{ nav.item('Another item', '#item3') }}
+        {{ nav.disabledItem('Disabled', '#item4') }}
+    {% endcall %}
+</demo>
+
+<demo aria-label="Pills nav with 4 items (incl. active & disabled state)">
+    {% call nav.pills() %}
+        {{ nav.activeItem('Active', '#item1') }}
+        {{ nav.item('Default item', '#item2') }}
+        {{ nav.item('Another item', '#item3') }}
+        {{ nav.disabledItem('Disabled', '#item4') }}
+    {% endcall %}
+</demo>
+{% endblock %}
