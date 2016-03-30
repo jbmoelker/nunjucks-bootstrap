@@ -1,5 +1,6 @@
 const express = require('express');
 const listModules = require('./lib/list-modules');
+const markdownToHtml = require('./lib/markdown-to-html');
 const renderer = require('./lib/renderer');
 
 const app = express();
@@ -24,10 +25,20 @@ app.get('/demo/modules.json', function(req, res) {
         return {
             group: nameParts[0],
             name: (nameParts[1] === nameParts[2]) ? nameParts[2] : [nameParts[1], nameParts[2]].join('/'),
-            url: '/demo/modules/' + name
+            url: '/demo/modules/' + name,
+            info: {
+                readme: '/demo/modules/' + [nameParts[0], nameParts[1]].join('/') + '/readme'
+            }
         }
     });
     res.send(modules);
+});
+
+app.get('/demo/modules/*?/readme', function(req, res) {
+    const filename = req.params[0] + '/README.md';
+    const body = markdownToHtml.render(filename);
+    const html = renderer.render('demo/info/info.html', { title: req.params[0], body });
+    res.send(html);
 });
 
 app.get('/demo/modules/*?', function(req, res) {

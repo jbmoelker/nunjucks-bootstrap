@@ -10,13 +10,13 @@
 
 Import the macros:
 
-```
+```html
 {% import "nav/breadcrumb/breadcrumb.html" as breadcrumb %}
 ```
 
 Create breadcrumb list with (active) items:
 
-```
+```html
 {% call breadcrumb.list() %}
     {{ breadcrumb.item('Home', '/') }}
     {{ breadcrumb.item('Library', '/library/') }}
