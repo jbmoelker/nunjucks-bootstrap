@@ -17,6 +17,14 @@
     },
     {
         "group": "nav",
+        "name": "navbar",
+        "url": "nav/navbar/navbar.demo.html",
+        "info": {
+            "readme": "nav/navbar/readme.html"
+        }
+    },
+    {
+        "group": "nav",
         "name": "tabs",
         "url": "nav/tabs/tabs.demo.html",
         "info": {

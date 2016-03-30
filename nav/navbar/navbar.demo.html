@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+              integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+              crossorigin="anonymous">
+    
+    <style>demo { display: block; }
+
+/* add a grey bar with the `aria-label` as demo title */
+demo:before {
+    content: "Demo: " attr(aria-label);
+    display: block;
+    background: #F3F5F5;
+    padding: .5em;
+    clear: both;
+    margin: .5em 0;
+}
+
+.demo-spacer {
+    display: block;
+    height: 1em;
+}</style>
+
+</head>
+<body>
+
+
+    <demo aria-label="Default navbar (light, faded)">
+        <nav role="navigation" class="navbar
+        navbar-light
+        bg-faded
+        
+        ">
+        navbar content
+        </nav>
+    </demo>
+
+    <demo aria-label="Navbar with brand">
+        <nav role="navigation" class="navbar
+        navbar-light
+        bg-faded
+        
+        ">
+            <a class="navbar-brand" rel="home" href="/">My company</a>
+
+        </nav>
+    </demo>
+
+    <demo aria-label="Navbar with brand, nav list and search form">
+        <nav role="navigation" class="navbar
+        navbar-light
+        bg-faded
+        
+        ">
+            <a class="navbar-brand" rel="home" href="/">My company</a>
+
+            <ul class="nav nav-inline navbar-nav ">
+    <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+    <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+</ul>
+            <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+
+        </nav>
+    </demo>
+
+    <demo aria-label="Navbar in different color schemes (dark-inverse | dark-primary | light-custom backgroud)">
+        <nav role="navigation" class="navbar
+        navbar-dark
+        bg-inverse
+        
+        ">
+    <a class="navbar-brand" rel="home" href="/">My company</a>
+
+    <ul class="nav nav-inline navbar-nav ">
+    <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+    <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+</ul>
+    <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+
+</nav>
+        <div class="demo-spacer"></div>
+        <nav role="navigation" class="navbar
+        navbar-dark
+        bg-primary
+        
+        ">
+    <a class="navbar-brand" rel="home" href="/">My company</a>
+
+    <ul class="nav nav-inline navbar-nav ">
+    <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+    <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+</ul>
+    <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+
+</nav>
+        <div class="demo-spacer"></div>
+        <nav role="navigation" class="navbar
+        navbar-light
+        bg-faded
+        
+        navbar-custom-bg">
+    <a class="navbar-brand" rel="home" href="/">My company</a>
+
+    <ul class="nav nav-inline navbar-nav ">
+    <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+    <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+</ul>
+    <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+
+</nav>
+        <style>.navbar-custom-bg { background-color: #e3f2fd; }</style>
+    </demo>
+
+    <demo aria-label="Navbar fixed to bottom">
+        <nav role="navigation" class="navbar
+        navbar-light
+        bg-faded
+        navbar-fixed-bottom
+        ">
+    <a class="navbar-brand" rel="home" href="/">My company</a>
+
+    <ul class="nav nav-inline navbar-nav ">
+    <li class="nav-item"><a class="nav-link active" href="#item1">Active</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item2">Default item</a></li>
+    <li class="nav-item"><a class="nav-link" href="#item3">Another item</a></li>
+    <li class="nav-item"><span class="nav-link disabled">Disabled</span></li>
+</ul>
+    <form role="search" class="form-inline pull-xs-right">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success-outline" type="submit">Search</button>
+    </form>
+
+</nav>
+    </demo>
+
+
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+            integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>

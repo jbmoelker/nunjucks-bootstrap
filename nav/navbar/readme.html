@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>nav/navbar/README.md</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+</head>
+<body>
+<main class="container-fluid"><h1 id="navbar">Navbar</h1>
+<h2 id="functionality">Functionality</h2>
+<blockquote class="blockquote"><p class="m-b-0"><p>The navbar is a simple wrapper for positioning branding, navigation, and other elements into a concise navigation header.</p>
+<p>-- <a href="http://v4-alpha.getbootstrap.com/components/navbar/">Bootstrap &gt; Navbar</a></p>
+</p></blockquote><h2 id="usage">Usage</h2>
+<p>Import the macros:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >import</span></span> <span class="token string" ><span class="token punctuation" >"</span>nav/navbar/navbar.html<span class="token punctuation" >"</span></span> <span class="token property" >as</span> <span class="token property" >navbar</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Typically used in combination with <code>nav</code> macros:</p>
+<pre class="language-unknown"><code>{% import "nav/nav/nav.html" as nav %}
+
+{% call navbar.bar(color='dark', background='primary') %}
+    {{ navbar.brand('My company') }}
+    {% call nav.inline() %}
+        {# ... nav items ... #}
+    {% endcall %}
+{% endcall %}</code></pre><h3 id="-bar-"><code>.bar()</code></h3>
+<p>Creates a navbar element.</p>
+<p>Use as <a href="http://mozilla.github.io/nunjucks/templating.html#call"><code>call</code> block</a>.
+Content (brand, nav, etc) inside block is displayed inside the navbar.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>color</td>
+<td>string <em>optional</em></td>
+<td>Text color. Options: <code>light</code> (default), <code>dark</code>.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>background</td>
+<td>string <em>optional</em></td>
+<td>Background color. Options: <code>faded</code> (default), <code>inverse</code>, <code>primary</code>.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>placement</td>
+<td>string <em>optional</em></td>
+<td>Alignment within parent. Options: <code>full</code>, <code>fixed-top</code>, <code>fixed-bottom</code>.</td>
+</tr>
+</table><h3 id="-nav-"><code>.nav()</code></h3>
+<p>Creates a navbar nav element.</p>
+<p>Use as <a href="http://mozilla.github.io/nunjucks/templating.html#call"><code>call</code> block</a>.
+Content inside block is displayed inside the nav.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>classes</td>
+<td>string[] <em>optional</em></td>
+<td>List of classes to apply to the nav element.</td>
+</tr>
+</table><h3 id="-brand-"><code>.brand()</code></h3>
+<p>Creates a brand anchor element.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>text</td>
+<td>string</td>
+<td>Text displayed inside link.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>url</td>
+<td>string <em>optional</em></td>
+<td>Url brand element links to. Defaults to <code>/</code>.</td>
+</tr>
+</table><h2 id="notes">Notes</h2>
+<ul>
+<li>Since <em>navbar</em> element is typically the main navigation element on the page, its decorated with <code>[role=&quot;navigation&quot;]</code>.</li>
+<li>Since <em>brand</em> element typically always links to home page, its decorated with <code>[rel=&quot;home&quot;]</code>.</li>
+</ul>
+</main>
+</body>
+</html>
