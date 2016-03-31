@@ -1,6 +1,6 @@
 # Demo module
 
-## Funcionality
+## Functionality
 
 Display a module in isolation, in all its variations.
 
