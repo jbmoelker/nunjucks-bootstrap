@@ -1,0 +1,19 @@
+{%- macro nav(classes = []) -%}
+<nav><ul class="pager {{ classes | join(' ') }}">{{ caller() }}</ul></nav>
+{%- endmacro -%}
+
+{%- macro previous(text = 'Previous', url, aligned = false) -%}
+    <li {% if aligned %}class="pager-prev"{% endif %}><a rel="prev" href="{{ url }}">{{ text }}</a></li>
+{%- endmacro -%}
+
+{%- macro next(text = 'Next', url, aligned = false) -%}
+    <li {% if aligned %}class="pager-next"{% endif %}><a rel="next" href="{{ url }}">{{ text }}</a></li>
+{%- endmacro -%}
+
+{%- macro disabledPrevious(text = 'Previous', aligned = false) -%}
+    <li class="{% if aligned %}pager-prev{% endif %} disabled"><span>{{ text }}</span></li>
+{%- endmacro -%}
+
+{%- macro disabledNext(text = 'Next', aligned = false) -%}
+    <li class="{% if aligned %}pager-next{% endif %} disabled"><span>{{ text }}</span></li>
+{%- endmacro -%}

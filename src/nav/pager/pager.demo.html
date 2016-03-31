@@ -1,0 +1,32 @@
+{% extends "demo/module/module.html" %}
+{% import "./pager.html" as pager %}
+
+{% block content %}
+    <demo aria-label="Pager with default previous & next links">
+        {% call pager.nav() %}
+            {{ pager.previous(url = '#/path/to/previous-page') }}
+            {{ pager.next(url = '#/path/to/next-page') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Pager with custom control labels">
+        {% call pager.nav() %}
+            {{ pager.previous(text = 'Newer', url = '#/path/to/previous-page') }}
+            {{ pager.next(text = 'Older', url = '#/path/to/next-page') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Pager with disabled control">
+        {% call pager.nav() %}
+            {{ pager.disabledPrevious() }}
+            {{ pager.next(url = '#/path/to/next-page') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Pager with aligned (spread) controls">
+        {% call pager.nav() %}
+            {{ pager.disabledPrevious(aligned = true) }}
+            {{ pager.next(url = '#/path/to/next-page', aligned = true) }}
+        {% endcall %}
+    </demo>
+{% endblock %}

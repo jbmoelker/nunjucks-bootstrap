@@ -10,6 +10,7 @@ You can [view the demos of all available modules](https://jbmoelker.github.io/nu
   * [breadcrumb](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/breadcrumb/breadcrumb.demo.html)
   * [nav](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/nav/nav.demo.html)
   * [navbar](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/navbar/navbar.demo.html)
+  * [pager](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/pager/pager.demo.html)
   * [tabs](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/tabs/tabs.demo.html)
 
 ## Template render engines
