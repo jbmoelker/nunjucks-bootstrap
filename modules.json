@@ -33,6 +33,14 @@
     },
     {
         "group": "nav",
+        "name": "pagination",
+        "url": "nav/pagination/pagination.demo.html",
+        "info": {
+            "readme": "nav/pagination/readme.html"
+        }
+    },
+    {
+        "group": "nav",
         "name": "tabs",
         "url": "nav/tabs/tabs.demo.html",
         "info": {

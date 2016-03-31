@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>nav/pagination/README.md</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+</head>
+<body>
+<main class="container-fluid"><h1 id="pagination">Pagination</h1>
+<h2 id="functionality">Functionality</h2>
+<blockquote class="blockquote"><p class="m-b-0"><p>Provide pagination links for your site or app with the multi-page pagination component,
+or the simpler <a href="../pager/README.md">pager alternative</a>.</p>
+<p>-- <a href="http://v4-alpha.getbootstrap.com/components/pagination/">Bootstrap &gt; Pagination</a></p>
+</p></blockquote><h2 id="usage">Usage</h2>
+<p>Import the macros:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >import</span></span> <span class="token string" ><span class="token punctuation" >"</span>nav/pagination/pagination.html<span class="token punctuation" >"</span></span> <span class="token property" >as</span> <span class="token property" >pagination</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Create pagination. E.g. for pages 1 to 10 with active and disabled link:</p>
+<pre class="language-unknown"><code>{% call pagination.nav() %}
+    {{ pagination.disabledPrevious() }}
+    {{ pagination.activeItem(1) }}
+    {% for page in range(2, 11) -%}
+    {{ pagination.item(page, '#/path/to/?page=' + page) }}
+    {%- endfor %}
+    {{ pagination.next(url = '#/path/to/next-page') }}
+{% endcall %}</code></pre><h3 id="-nav-largenav-smallnav-"><code>.nav()</code>, <code>.largeNav()</code>, <code>smallNav()</code>.</h3>
+<p>Creates a (normal, large, small) pagination element.</p>
+<p>Use as <a href="http://mozilla.github.io/nunjucks/templating.html#call"><code>call</code> block</a>.
+Content inside block is displayed inside the pagination element.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>classes</td>
+<td>string[] <em>optional</em></td>
+<td>List of classes to apply to the pagination element.</td>
+</tr>
+</table><h3 id="-item-activeitem-disableditem-"><code>.item()</code>, <code>.activeItem()</code>, <code>.disabledItem()</code></h3>
+<p>Creates a (normal, active, disabled) pagination item.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>text</td>
+<td>string <em>optional</em></td>
+<td>Text displayed inside item. Defaults to <code>Previous</code> / <code>Next</code>.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>url</td>
+<td>string <em>optional</em></td>
+<td>Url item links to. Not needed for <code>activeItem()</code>, <code>disabledItem()</code>.</td>
+</tr>
+</table><h3 id="-previous-next-disabledprevious-disablednext-"><code>.previous()</code>, <code>.next()</code>, <code>disabledPrevious()</code>, <code>disabledNext()</code></h3>
+<p>Creates a (previous, next) pagination link.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>text</td>
+<td>string <em>optional</em></td>
+<td>Text displayed inside item. Defaults to <code>Previous</code> / <code>Next</code>.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>url</td>
+<td>string <em>optional</em></td>
+<td>Url item links to. Not needed for <code>disabledItem()</code>.</td>
+</tr>
+</table><h2 id="notes">Notes</h2>
+<ul>
+<li>Previous and next links are decorated with <code>rel=&quot;prev&quot;</code> / <code>rel=&quot;next&quot;</code> to <a href="https://support.google.com/webmasters/answer/1663744">indicate paginated content</a>.</li>
+<li>Disabled links are formatted as <code>&lt;span&gt;</code> instead of <code>&lt;a&gt;</code> as there is no such thing as a &quot;disabled link&quot; in HTML.</li>
+</ul>
+</main>
+</body>
+</html>

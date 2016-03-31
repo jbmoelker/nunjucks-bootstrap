@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+              integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+              crossorigin="anonymous">
+    
+    <style>demo { display: block; }
+
+/* add a grey bar with the `aria-label` as demo title */
+demo:before {
+    content: "Demo: " attr(aria-label);
+    display: block;
+    background: #F3F5F5;
+    padding: .5em;
+    clear: both;
+    margin: .5em 0;
+}
+
+.demo-spacer {
+    display: block;
+    height: 1em;
+}</style>
+
+</head>
+<body>
+
+
+    <demo aria-label="Default pagination">
+        <nav><ul class="pagination ">
+            <li class="page-item">
+        <a class="page-link" rel="prev" href="#/path/to/previous-page" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+        </a>
+    </li>
+            <li class="page-item"><a class="page-link" href="#/path/to/?page=1">1</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=2">2</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=3">3</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=4">4</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=5">5</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=6">6</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=7">7</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=8">8</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=9">9</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=10">10</a></li>
+            <li class="page-item">
+        <a class="page-link" rel="next" href="#/path/to/next-page" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        </a>
+    </li>
+        </ul></nav>
+    </demo>
+
+    <demo aria-label="Pagination with active and disabled links">
+        <nav><ul class="pagination ">
+            <li class="page-item disabled">
+        <span class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+        </span>
+    </li>
+            <li class="page-item active"><span class="page-link">1</span></li>
+            <li class="page-item"><a class="page-link" href="#/path/to/?page=2">2</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=3">3</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=4">4</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=5">5</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=6">6</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=7">7</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=8">8</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=9">9</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=10">10</a></li>
+            <li class="page-item">
+        <a class="page-link" rel="next" href="#/path/to/next-page" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        </a>
+    </li>
+        </ul></nav>
+    </demo>
+
+    <demo aria-label="Large pagination">
+        <nav><ul class="pagination pagination-lg ">
+        
+    <li class="page-item">
+        <a class="page-link" rel="prev" href="#/path/to/previous-page" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+        </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#/path/to/?page=1">1</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=2">2</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=3">3</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=4">4</a></li>
+    <li class="page-item active"><span class="page-link">5</span></li>
+    <li class="page-item disabled">
+        <span class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        </span>
+    </li>
+
+        </ul></nav>
+    </demo>
+
+    <demo aria-label="Small pagination">
+        <nav><ul class="pagination pagination-sm ">
+        
+    <li class="page-item">
+        <a class="page-link" rel="prev" href="#/path/to/previous-page" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+        </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#/path/to/?page=1">1</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=2">2</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=3">3</a></li><li class="page-item"><a class="page-link" href="#/path/to/?page=4">4</a></li>
+    <li class="page-item active"><span class="page-link">5</span></li>
+    <li class="page-item disabled">
+        <span class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+        </span>
+    </li>
+
+        </ul></nav>
+    </demo>
+
+
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+            integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
