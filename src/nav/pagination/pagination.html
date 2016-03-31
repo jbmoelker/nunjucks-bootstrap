@@ -1,0 +1,59 @@
+{%- macro nav(classes = []) -%}
+    <nav><ul class="pagination {{ classes | join(' ') }}">{{ caller() }}</ul></nav>
+{%- endmacro -%}
+
+{%- macro largeNav(classes = []) -%}
+    <nav><ul class="pagination pagination-lg {{ classes | join(' ') }}">{{ caller() }}</ul></nav>
+{%- endmacro -%}
+
+{%- macro smallNav(classes = []) -%}
+    <nav><ul class="pagination pagination-sm {{ classes | join(' ') }}">{{ caller() }}</ul></nav>
+{%- endmacro -%}
+
+{%- macro item(text, url) -%}
+    <li class="page-item"><a class="page-link" href="{{ url }}">{{ text }}</a></li>
+{%- endmacro -%}
+
+{%- macro activeItem(text) -%}
+    <li class="page-item active"><span class="page-link">{{ text }}</span></li>
+{%- endmacro -%}
+
+{%- macro disabledItem(text, url) -%}
+    <li class="page-item disabled"><span class="page-link">{{ text }}</span></li>
+{%- endmacro -%}
+
+{%- macro previous(text = 'Previous', url) -%}
+    <li class="page-item">
+        <a class="page-link" rel="prev" href="{{ url }}" aria-label="{{ text }}">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">{{ text }}</span>
+        </a>
+    </li>
+{%- endmacro -%}
+
+{%- macro next(text = 'Next', url) -%}
+    <li class="page-item">
+        <a class="page-link" rel="next" href="{{ url }}" aria-label="{{ text }}">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">{{ text }}</span>
+        </a>
+    </li>
+{%- endmacro -%}
+
+{%- macro disabledPrevious(text = 'Previous') -%}
+    <li class="page-item disabled">
+        <span class="page-link">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">{{ text }}</span>
+        </span>
+    </li>
+{%- endmacro -%}
+
+{%- macro disabledNext(text = 'Next') -%}
+    <li class="page-item disabled">
+        <span class="page-link">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">{{ text }}</span>
+        </span>
+    </li>
+{%- endmacro -%}

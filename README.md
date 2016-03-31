@@ -29,6 +29,7 @@ You can [view the demos of all available modules](https://jbmoelker.github.io/nu
   * [nav](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/nav/nav.demo.html)
   * [navbar](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/navbar/navbar.demo.html)
   * [pager](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/pager/pager.demo.html)
+  * [pagination](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/pagination/pagination.demo.html)
   * [tabs](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/tabs/tabs.demo.html)
 
 The source files of all modules can be found in `src/`. Each module has its own readme with instructions on how to use its macros.

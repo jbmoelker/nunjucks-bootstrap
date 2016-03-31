@@ -1,0 +1,46 @@
+{% extends "demo/module/module.html" %}
+{% import "./pagination.html" as pagination %}
+
+{% block content %}
+    <demo aria-label="Default pagination">
+        {% call pagination.nav() %}
+            {{ pagination.previous(url = '#/path/to/previous-page') }}
+            {% for page in range(1, 11) -%}
+            {{ pagination.item(page, '#/path/to/?page=' + page) }}
+            {%- endfor %}
+            {{ pagination.next(url = '#/path/to/next-page') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Pagination with active and disabled links">
+        {% call pagination.nav() %}
+            {{ pagination.disabledPrevious() }}
+            {{ pagination.activeItem(1) }}
+            {% for page in range(2, 11) -%}
+            {{ pagination.item(page, '#/path/to/?page=' + page) }}
+            {%- endfor %}
+            {{ pagination.next(url = '#/path/to/next-page') }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Large pagination">
+        {% call pagination.largeNav() %}
+        {{ demoPaginationItems() }}
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Small pagination">
+        {% call pagination.smallNav() %}
+        {{ demoPaginationItems() }}
+        {% endcall %}
+    </demo>
+{% endblock %}
+
+{% macro demoPaginationItems() %}
+    {{ pagination.previous(url = '#/path/to/previous-page') }}
+    {% for page in range(1, 5) -%}
+    {{ pagination.item(page, '#/path/to/?page=' + page) }}
+    {%- endfor %}
+    {{ pagination.activeItem(5) }}
+    {{ pagination.disabledNext() }}
+{% endmacro %}
