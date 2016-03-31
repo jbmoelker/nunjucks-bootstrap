@@ -25,6 +25,14 @@
     },
     {
         "group": "nav",
+        "name": "pager",
+        "url": "nav/pager/pager.demo.html",
+        "info": {
+            "readme": "nav/pager/readme.html"
+        }
+    },
+    {
+        "group": "nav",
         "name": "tabs",
         "url": "nav/tabs/tabs.demo.html",
         "info": {
