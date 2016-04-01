@@ -1,0 +1,17 @@
+{%- macro element() -%}
+    <figure class="figure">{{ caller() }}</figure>
+{%- endmacro -%}
+
+{%- macro caption(text, align) -%}
+    <figcaption class="figure-caption {{ _align(align) }}">{{ text }}</figcaption>
+{%- endmacro -%}
+
+{%- macro _align(position) -%}
+    {%- if align == 'left' -%}
+        pull-xs-left
+        {%- elif align == 'center' -%}
+        center-block
+        {%- elif align == 'right' -%}
+        pull-xs-right
+    {%- endif %}
+{%- endmacro -%}
