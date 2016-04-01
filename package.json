@@ -1,6 +1,5 @@
 {
   "name": "nunjucks-bootstrap",
-  "private": true,
   "version": "0.1.0",
   "description": "Nunjucks templates for Bootstrap modules",
   "main": "index.js",
