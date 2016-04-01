@@ -24,6 +24,8 @@ The [macros](https://mozilla.github.io/nunjucks/templating.html#macro) produce H
 
 You can [view the demos of all available modules](https://jbmoelker.github.io/nunjucks-bootstrap/).
 
+* **media**
+  * [image](https://jbmoelker.github.io/nunjucks-bootstrap/#media/image/image.demo.html)
 * **nav**
   * [breadcrumb](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/breadcrumb/breadcrumb.demo.html)
   * [nav](https://jbmoelker.github.io/nunjucks-bootstrap/#nav/nav/nav.demo.html)

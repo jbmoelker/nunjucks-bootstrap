@@ -1,0 +1,29 @@
+{%- macro responsive(alt, src) -%}
+    <img alt="{{ alt }}" src="{{ src }}" class="img-fluid">
+{%- endmacro -%}
+
+{%- macro rounded(alt, src, align) -%}
+    {{ _shape('rounded', alt, src, align) }}
+{%- endmacro -%}
+
+{%- macro circle(alt, src, align) -%}
+    {{ _shape('circle', alt, src, align) }}
+{%- endmacro -%}
+
+{%- macro thumbnail(alt, src, align) -%}
+    {{ _shape('thumbnail', alt, src, align) }}
+{%- endmacro -%}
+
+{%- macro _shape(shape, alt, src, align) -%}
+    <img alt="{{ alt }}" src="{{ src }}" class="{{ 'img-' + shape }} {{ _align(align) }}">
+{%- endmacro -%}
+
+{%- macro _align(position) -%}
+    {%- if align == 'left' -%}
+        pull-xs-left
+        {%- elif align == 'center' -%}
+        center-block
+        {%- elif align == 'right' -%}
+        pull-xs-right
+    {%- endif %}
+{%- endmacro -%}
