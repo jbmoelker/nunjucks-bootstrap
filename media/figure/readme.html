@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>media/figure/README.md</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/themes/prism.css">
+</head>
+<body>
+<main class="container-fluid"><h1 id="figure">Figure</h1>
+<h2 id="functionality">Functionality</h2>
+<blockquote class="blockquote"><p class="m-b-0"><p>Anytime you need to display a piece of content—like an image—with an optional caption, consider using a <code>&lt;figure&gt;</code>.</p>
+<p>-- <a href="http://v4-alpha.getbootstrap.com/content/figures/">Bootstrap &gt; Figures</a></p>
+</p></blockquote><h2 id="usage">Usage</h2>
+<p>Import the macros:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >import</span></span> <span class="token string" ><span class="token punctuation" >"</span>media/figure/figure.html<span class="token punctuation" >"</span></span> <span class="token property" >as</span> <span class="token property" >figure</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><p>Create figure with content and caption:</p>
+<pre class="language-html"><code><span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >call</span></span> <span class="token property" >figure</span><span class="token punctuation" >.</span><span class="token property" >element</span><span class="token punctuation" >(</span><span class="token punctuation" >)</span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span>
+    <span class="token other" ><span class="token tag" ><span class="token tag" ><span class="token punctuation" >&lt;</span>img</span> <span class="token attr-name" >alt</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>Alternative text<span class="token punctuation" >"</span></span> <span class="token attr-name" >src</span><span class="token attr-value" ><span class="token punctuation" >=</span><span class="token punctuation" >"</span>path/to/image.jpg<span class="token punctuation" >"</span></span><span class="token punctuation" >></span></span></span>
+    <span class="token tag" ><span class="token ld" ><span class="token punctuation" >{{</span></span> <span class="token property" >figure</span><span class="token punctuation" >.</span><span class="token property" >caption</span><span class="token punctuation" >(</span><span class="token string" ><span class="token punctuation" >'</span>A caption for the above image.<span class="token punctuation" >'</span></span><span class="token punctuation" >,</span> <span class="token property" >align</span> <span class="token operator" >=</span> <span class="token string" ><span class="token punctuation" >'</span>right<span class="token punctuation" >'</span></span><span class="token punctuation" >)</span> <span class="token rd" ><span class="token punctuation" >}}</span></span></span>
+<span class="token tag" ><span class="token ld" ><span class="token punctuation" >{%</span> <span class="token keyword" >endcall</span></span> <span class="token rd" ><span class="token punctuation" >%}</span></span></span></code></pre><h3 id="-element-"><code>.element()</code></h3>
+<p>Creates a figure element.</p>
+<p>Use as <a href="http://mozilla.github.io/nunjucks/templating.html#call"><code>call</code> block</a>.
+Content inside block is displayed inside the figure element.</p>
+<h3 id="-caption-"><code>.caption()</code></h3>
+<p>Create a figcaption.</p>
+<table class="table table-striped"><tr>
+<th>index</th>
+<th>parameter</th>
+<th>type</th>
+<th>description</th>
+</tr>
+<tr>
+<td>0</td>
+<td>text</td>
+<td>string</td>
+<td>Text describing the image.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>align</td>
+<td>string <em>optional</em></td>
+<td>Options: <code>left</code>, <code>center</code> or <code>right</code>.</td>
+</tr>
+</table></main>
+</body>
+</html>

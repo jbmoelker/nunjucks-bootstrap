@@ -1,5 +1,21 @@
 [
     {
+        "group": "media",
+        "name": "figure",
+        "url": "media/figure/figure.demo.html",
+        "info": {
+            "readme": "media/figure/readme.html"
+        }
+    },
+    {
+        "group": "media",
+        "name": "image",
+        "url": "media/image/image.demo.html",
+        "info": {
+            "readme": "media/image/readme.html"
+        }
+    },
+    {
         "group": "nav",
         "name": "breadcrumb",
         "url": "nav/breadcrumb/breadcrumb.demo.html",
