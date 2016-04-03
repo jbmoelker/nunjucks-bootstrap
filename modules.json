@@ -9,6 +9,14 @@
     },
     {
         "group": "media",
+        "name": "embed",
+        "url": "media/embed/embed.demo.html",
+        "info": {
+            "readme": "media/embed/readme.html"
+        }
+    },
+    {
+        "group": "media",
         "name": "figure",
         "url": "media/figure/figure.demo.html",
         "info": {

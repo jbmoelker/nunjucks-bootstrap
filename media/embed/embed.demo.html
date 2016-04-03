@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+              integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+              crossorigin="anonymous">
+    
+    <style>demo { display: block; }
+
+/* add a grey bar with the `aria-label` as demo title */
+demo:before {
+    content: "Demo: " attr(aria-label);
+    display: block;
+    background: #F3F5F5;
+    padding: .5em;
+    clear: both;
+    margin: .5em 0;
+}
+
+.demo-spacer {
+    display: block;
+    height: 1em;
+}</style>
+
+</head>
+<body>
+
+
+    <demo aria-label="Responsive embed - preset ratio 21:9">
+        <div class="embed-responsive embed-responsive-21by9">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 16:9">
+        <div class="embed-responsive embed-responsive-16by9">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 4:3">
+        <div class="embed-responsive embed-responsive-4by3">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 1:1">
+        <div class="embed-responsive embed-responsive-1by1">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed - custom ratio (e.g. ratio = 2/1)">
+        <div class="embed-responsive" style="padding-bottom:50%">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed - custom sizes (e.g. width = 2, height = 1)">
+        <div class="embed-responsive" style="padding-bottom:50%">
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        </div>
+    </demo>
+
+    <demo aria-label="Responsive embed iframe">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div>
+    </demo>
+
+
+
+
+    <!-- jQuery first, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"
+            integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7"
+            crossorigin="anonymous"></script>
+
+</body>
+</html>
