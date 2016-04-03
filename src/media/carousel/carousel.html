@@ -1,0 +1,67 @@
+{%- macro allControls(id = 'carousel-' + randomHash(), interval = 5000, pause = 'hover', wrap = true, keyboard = true) -%}
+    {{ _element(id, interval, pause, wrap, keyboard, showIndicators = true, showArrows = true) }}
+{%- endmacro -%}
+
+{%- macro noControls(id = 'carousel-' + randomHash(), interval = 5000, pause = 'hover', wrap = true, keyboard = true) -%}
+    {{ _element(id, interval, pause, wrap, keyboard, showIndicators = false, showArrows = false) }}
+{%- endmacro -%}
+
+{%- macro indicatorsOnly(id = 'carousel-' + randomHash(), interval = 5000, pause = 'hover', wrap = true, keyboard = true) -%}
+    {{ _element(id, interval, pause, wrap, keyboard, showIndicators = true, showArrows = false) }}
+{%- endmacro -%}
+
+{%- macro arrowsOnly(id = 'carousel-' + randomHash(), interval = 5000, pause = 'hover', wrap = true, keyboard = true) -%}
+    {{ _element(id, interval, pause, wrap, keyboard, showIndicators = false, showArrows = true) }}
+{%- endmacro -%}
+
+{%- macro item() -%}
+    <div class="carousel-item {% if counter.print() == 0 %}active{% endif %}">{{ caller() }}</div>
+    {#- -#}{{ counter.increment() }}{#- -#}
+{%- endmacro -%}
+
+{%- macro imageItem(alt, src) -%}
+    {% call item() %}
+        <img src="{{ src }}" alt="{{ alt }}">
+    {% endcall %}
+{%- endmacro -%}
+
+{%- macro indicators(carouselId = storage.getItem('carousel_id'), itemCount = counter.print()) -%}
+<ol class="carousel-indicators">
+    {% for index in range(0, itemCount) -%}
+        <li data-target="#{{ carouselId }}" data-slide-to="{{ index }}"
+            {% if index == 0 %}class="active{% endif %}"></li>
+    {%- endfor %}
+</ol>
+{%- endmacro -%}
+
+{%- macro previous(text = 'Previous', carouselId = storage.getItem('carousel_id')) -%}
+    <a class="left carousel-control" href="#{{ carouselId }}" role="button" data-slide="prev">
+        <span class="icon-prev" aria-hidden="true"></span>
+        <span class="sr-only">{{ text }}</span>
+    </a>
+{%- endmacro -%}
+
+{%- macro next(text = 'Next', carouselId = storage.getItem('carousel_id')) -%}
+    <a class="right carousel-control" href="#{{ carouselId }}" role="button" data-slide="next">
+        <span class="icon-next" aria-hidden="true"></span>
+        <span class="sr-only">{{ text }}</span>
+    </a>
+{%- endmacro -%}
+
+{%- macro _element(id = 'carousel-' + randomHash(), interval = 5000, pause = 'hover', wrap = true, keyboard = true, showIndicators = true, showArrows = true) -%}
+    {#- trim whitespace -#}
+    {{ counter.reset() }}
+    {{ storage.setItem('carousel_id', id) }}
+    {#- -#}
+    <div class="carousel slide" data-ride="carousel"
+         id="{{ storage.getItem('carousel_id') }}"
+         data-interval="{{ interval }}"
+         data-pause="{{ pause }}"
+         data-wrap="{{ wrap }}"
+         data-keyboard="{{ keyboard }}"
+            >
+        <div class="carousel-inner" role="listbox">{{ caller() }}</div>
+        {% if showIndicators %}{{ indicators() }}{% endif %}
+        {% if showArrows %}{{ previous() }} {{ next() }}{% endif %}
+    </div>
+{%- endmacro -%}
