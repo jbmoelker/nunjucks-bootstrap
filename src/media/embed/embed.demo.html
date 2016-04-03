@@ -1,0 +1,47 @@
+{% extends "demo/module/module.html" %}
+{% import "./embed.html" as embed %}
+
+{% block content %}
+    <demo aria-label="Responsive embed - preset ratio 21:9">
+        {% call embed.ratio21by9() %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 16:9">
+        {% call embed.ratio16by9() %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 4:3">
+        {% call embed.ratio4by3() %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed - preset ratio 1:1">
+        {% call embed.ratio1by1() %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed - custom ratio (e.g. ratio = 2/1)">
+        {% call embed.ratio(2/1) %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed - custom sizes (e.g. width = 2, height = 1)">
+        {% call embed.sizes(2, 1) %}
+            <div class="embed-responsive-item" style="background:#CCC;">content</div>
+        {% endcall %}
+    </demo>
+
+    <demo aria-label="Responsive embed iframe">
+        {% call embed.ratio16by9() %}
+            {{ embed.iframe('https://www.youtube.com/embed/zpOULjyy-n8?rel=0') }}
+        {% endcall %}
+    </demo>
+
+{% endblock %}

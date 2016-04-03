@@ -26,6 +26,7 @@ You can [view the demos of all available modules](https://jbmoelker.github.io/nu
 
 * **media**
   * [carousel](https://jbmoelker.github.io/nunjucks-bootstrap/#media/carousel/carousel.demo.html)
+  * [embed](https://jbmoelker.github.io/nunjucks-bootstrap/#media/embed/embed.demo.html)
   * [figure](https://jbmoelker.github.io/nunjucks-bootstrap/#media/figure/figure.demo.html)
   * [image](https://jbmoelker.github.io/nunjucks-bootstrap/#media/image/image.demo.html)
 * **nav**

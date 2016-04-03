@@ -1,0 +1,31 @@
+{%- macro ratio21by9() -%}
+    <div class="embed-responsive embed-responsive-21by9">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro ratio16by9() -%}
+    <div class="embed-responsive embed-responsive-16by9">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro ratio4by3() -%}
+    <div class="embed-responsive embed-responsive-4by3">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro ratio1by1() -%}
+    <div class="embed-responsive embed-responsive-1by1">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro ratio(ratio) -%}
+    <div class="embed-responsive" style="padding-bottom:{{ 100 / ratio }}%">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro sizes(width, height) -%}
+    {{ ratio(width/height) }}
+{%- endmacro -%}
+
+{%- macro item() -%}
+    <div class="embed-responsive-item">{{ caller() }}</div>
+{%- endmacro -%}
+
+{%- macro iframe(src) -%}
+    <iframe class="embed-responsive-item" src="{{ src }}" allowfullscreen></iframe>
+{%- endmacro -%}
