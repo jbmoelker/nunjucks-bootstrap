@@ -1,6 +1,14 @@
 [
     {
         "group": "media",
+        "name": "carousel",
+        "url": "media/carousel/carousel.demo.html",
+        "info": {
+            "readme": "media/carousel/readme.html"
+        }
+    },
+    {
+        "group": "media",
         "name": "figure",
         "url": "media/figure/figure.demo.html",
         "info": {
