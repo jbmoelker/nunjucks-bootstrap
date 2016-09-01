@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jbmoelker/nunjucks-bootstrap#readme",
   "devDependencies": {
     "bluebird": "3.3.4",
+    "demo-viewer": "1.0.0",
     "express": "4.13.4",
     "glob": "7.0.3",
     "http-server": "0.9.0",

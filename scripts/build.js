@@ -8,6 +8,7 @@ const saveFile = require('../lib/save-file');
 
 const srcDir = 'src/';
 const distDir = 'dist/';
+const demoDir = 'node_modules/demo-viewer/dist/';
 const ext = '.demo.html';
 const moduleNames = listModules();
 
@@ -40,8 +41,8 @@ function buildReadmes() {
 function buildViewer() {
     return Promise.all([
         copyFile(`${srcDir}demo/viewer/viewer.html`, `${distDir}index.html`),
-        copyFile(`${srcDir}demo/viewer/viewer.css`, `${distDir}viewer.css`),
-        copyFile(`${srcDir}demo/viewer/viewer.js`, `${distDir}viewer.js`),
+        copyFile(`${demoDir}demo-viewer.css`, `${distDir}viewer.css`),
+        copyFile(`${demoDir}demo-viewer.js`, `${distDir}viewer.js`),
         buildViewerJson()
     ]);
 }

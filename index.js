@@ -4,20 +4,16 @@ const markdownToHtml = require('./lib/markdown-to-html');
 const renderer = require('./lib/renderer');
 
 const app = express();
-const port = 65527;
+const port = process.env.PORT || 65527;
+const demoDir = 'node_modules/demo-viewer/dist/';
 
 app.use('/assets', express.static('src/assets'));
 
-app.get('/', function(req,res){
-    res.redirect('/demo/');
-});
+app.get('/', (req,res) => res.redirect('/demo/'));
 
-app.get('/demo/', function(req, res) {
-    const html = renderer.render('demo/viewer/viewer.html', {});
-    res.send(html);
-});
-app.use('/demo/viewer.css', express.static('src/demo/viewer/viewer.css'));
-app.use('/demo/viewer.js', express.static('src/demo/viewer/viewer.js'));
+app.get('/demo/', (req, res) => res.send(renderer.render('demo/viewer/viewer.html')));
+app.use('/demo/viewer.css', express.static(`${demoDir}demo-viewer.css`));
+app.use('/demo/viewer.js',  express.static(`${demoDir}demo-viewer.js`));
 
 app.get('/demo/modules.json', function(req, res) {
     const modules = listModules().map(name => {
